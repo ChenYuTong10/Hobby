@@ -1,7 +1,7 @@
 # 学生服务小程序
 
 #### Description
-个人开发的第一个小程序Demo
+个人开发的第一个小程序Demo，目前为体验版
 
 #### Built With
 1.  Html/CSS
