@@ -1,0 +1,39 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/repair/index",
+        "pages/user/index",
+        "pages/login/index",
+        "pages/feedback/index",
+        "pages/timetable/index",
+        "pages/course_management/index",
+        "pages/course_detail/index",
+        "pages/history_repair/index",
+        "pages/course_list/index",
+        "pages/search/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "智慧校园",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "#5183f7",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "icons/首页(未选中).png",
+                "selectedIconPath": "icons/首页(已选中).png"
+            },
+            {
+                "pagePath": "pages/user/index",
+                "text": "个人中心",
+                "iconPath": "icons/我(未选中).png",
+                "selectedIconPath": "icons/我(已选中).png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

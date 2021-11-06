@@ -1,0 +1,52 @@
+<view class="repair_image_group">
+    <view class="repair_image">
+        <image src="../../pictures/广州大学服务中心banner3.png" />
+    </view>
+</view>
+
+<view class="repair_info_group">
+    <view class="repair_info">
+        <view class="repair_info_input">
+            <view class="repair_info_item">
+                <view class="item_title">姓名</view>
+                <view class="item_content">
+                    <input value="{{repair_info.name}}" bind:input="handleInputName" placeholder="请输入姓名" />
+                </view>
+            </view>
+            <view class="repair_info_item">
+                <view class="item_title">手机号</view>
+                <view class="item_content">
+                    <input value="{{repair_info.phone}}" bind:input="handleInputPhone" placeholder="请输入手机号码" />
+                </view>
+            </view>
+            <view class="repair_info_item">
+                <view class="item_title">宿舍号</view>
+                <view class="item_content">
+                    <input value="{{repair_info.dorm}}" bind:input="handleInputDorm" placeholder="请输入宿舍号" />
+                </view>
+            </view>
+            <view class="repair_info_item">
+                <view class="item_title">故障情况</view>
+                <view class="item_content">
+                    <input value="{{repair_info.details}}" bind:input="handleInputDetails" placeholder="请简略描述宿舍故障情况" />
+                </view>
+            </view>
+        </view>
+        <view class="repair_info_submit">
+            <button bind:tap="handleSubmit">提交</button>
+        </view>
+        <view class="history_repair_infor">
+            <navigator url="/pages/history_repair/index?username={{username}}">历史记录</navigator>
+        </view>
+        <view class="repair_note">
+            <view class="note_title">
+                <view class="title_text iconfont icon-warn-line">温馨提示:</view>
+            </view>
+            <view class="note_content">
+                <view class="content_item">1.正常工作时间:除法定节假日,周一到周五,如有特殊情况,请注意公告。</view>
+                <view class="content_item">2.报修后24小时之内将会有维修人员上门维修,请耐心等待。</view>
+                <view class="content_item">3.如仍有疑问,请致电客服。</view>
+            </view>
+        </view>
+    </view>
+</view>

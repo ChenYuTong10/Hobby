@@ -1,0 +1,4 @@
+<!--components/search/search.wxml-->
+<view class="search_group">
+    <navigator class="search_input iconfont icon-sousuo" url="/pages/search/index">搜索课程名称,授课教师</navigator>
+</view>

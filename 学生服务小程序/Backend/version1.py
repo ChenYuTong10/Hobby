@@ -1,3 +1,6 @@
+# 使用SQLite作为数据库，功能完全
+# 没有对数据进行分表等操作，未考虑数据库的性能问题
+
 import os
 import re
 import time

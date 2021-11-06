@@ -1,0 +1,148 @@
+/* pages/course/index.wxss */
+
+/*菜单栏*/
+.add_class_group{
+    padding: 40rpx 25rpx;
+}
+.add_class_content{
+    box-shadow: 20rpx 20rpx 20rpx #ecebeb;
+    border: 2rpx solid #f0f0f0;
+    border-radius: 20rpx;
+}
+.class_item{
+    padding: 18rpx;
+    font-size:28rpx;
+    border-bottom:2rpx solid #f0f0f0;
+    display: flex;
+}
+.class_item_title::before{
+    margin: 20rpx;
+}
+.class_item_title{
+    width: 35%;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.class_item_content{
+    display: flex;
+    align-items: center;
+    font-size: 26rpx;
+    padding: 10rpx 20rpx;
+    flex: 1;
+}
+.class_item_content input{
+    width: 100%;
+}
+/*单独给授课时间设置样式*/
+.class_item:nth-child(3){
+    display: block;
+}
+.class_item:nth-child(3) .class_item_content{
+    flex: 1;
+    display: flex;
+}
+.class_item_content picker{
+    position: relative;
+    flex: 1;
+    text-align:center;
+    margin: 0 10rpx;
+    padding-bottom: 10rpx;
+    border-bottom: 2rpx solid #ecebeb;
+}
+picker::after{
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 14rpx;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10rpx solid transparent;
+    border-top: 10rpx solid #999;
+}
+.class_item_content picker:nth-child(1){
+    text-align: left;
+}
+.class_item_content text{
+    width: 10%;
+    text-align: center;
+}
+
+
+/*登录界面*/
+.login_group{
+    padding: 40rpx 25rpx;
+}
+.login_content{
+    box-shadow: 20rpx 20rpx 20rpx #ecebeb;
+    border: 2rpx solid #f0f0f0;
+    border-radius: 20rpx;
+}
+/*头部*/
+.login_welcome_head{
+    margin-bottom: 60rpx;
+    height: 25vh;
+    border-radius: 20rpx 20rpx 50% 50%;
+    background-color: var(--themeColor);
+}
+.welcome_text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 40rpx;
+    font-weight: 600;
+    letter-spacing: 20rpx;
+}
+/*登录信息*/
+.login_item{
+    margin: 25rpx 0;
+    padding: 0 50rpx;
+    font-size: 26rpx;
+    display: flex;
+    border-bottom: 1rpx solid #f0f0f0;
+}
+.login_item_title::before{
+    margin: 0 15rpx;
+    font-size: 40rpx;
+}
+.login_item_title{
+    padding: 20rpx 0;
+    width: 30%;
+}
+.login_item_content{
+    flex: 1;
+    padding: 20rpx 0;
+    font-size: 30rpx;
+}
+
+
+/*按钮*/
+button{
+    margin: 30rpx;
+    font-size: 32rpx;
+    color: #fff;
+    background-color: var(--themeColor);
+}
+/*温馨提示*/
+.note{
+    margin:28rpx;
+    font-size: 24rpx;
+    color: #9d9d9d;
+    letter-spacing: 1rpx;
+    line-height: 45rpx;
+}
+.note_title::before{
+    font-size: 32rpx;
+}
+.title_text{
+    margin-left: 10rpx;
+    font-size: 24rpx;
+}
+.content_item{
+    padding:0 10rpx 0 30rpx;
+}

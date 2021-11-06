@@ -1,0 +1,5 @@
+<!--components/upimage/upimage.wxml-->
+<view class="upimage_group">
+    <image bindtap="handlePreviewImage" src="{{src}}" />
+    <icon bindtap="handleDeleteImage" type="clear" size="20" color="red" />
+</view>

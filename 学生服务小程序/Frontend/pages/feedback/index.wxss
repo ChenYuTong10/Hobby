@@ -1,0 +1,75 @@
+/* pages/setting/index.wxss */
+page{
+    background-color: #f5f5f5;
+}
+
+/*反馈留言区*/
+.feedback_content_group{
+    background-color: #fff;
+    padding: 20rpx 32rpx;
+    font-size: 30rpx;
+}
+textarea{
+    width: 100%;
+}
+.feedback_image{
+    margin-top: 20rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.feedback_image_button{
+    background-color:#eee;
+    width: 90rpx;
+    height: 90rpx;
+    margin: 22rpx 18rpx 10rpx 18rpx;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback_image_content{
+    display: flex;
+    flex-wrap: wrap;
+}
+upimage{
+    margin: 20rpx;
+}
+
+/*单选按钮*/
+.feekback_type_group{
+    margin-top: 30rpx;
+    background-color: #fff;
+}
+.feedback_type_title{
+    padding: 12rpx 32rpx;
+}
+radio-group{
+    display: flex;
+    padding: 10rpx 0 20rpx 0;
+}
+.content_item{
+    flex: 1;
+    text-align: center;
+}
+radio{
+    /*调整按钮大小*/
+    transform:scale(0.8);
+}
+radio .wx-radio-input.wx-radio-input-checked {
+    /*调整勾选颜色*/
+    border-color: #5284f7;
+    background: #5284f7;
+}
+
+/*提交按钮*/
+.feedback_button_group{
+    margin: 50rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback_submit_button{
+    width: 100%;
+    color: #fff;
+    background-color: #5284f7;
+}

@@ -1,0 +1,16 @@
+<!--pages/login/index.wxml-->
+<view class="login_group">
+    <view class="login">
+        <view class="login_image">
+            <image class="login_top_image" src="https://z3.ax1x.com/2021/07/26/WfFiPP.png" />
+            <image class="login_bottom_image" src="https://z3.ax1x.com/2021/09/24/4rS4QU.png" />
+        </view>
+        <view class="login_introduction">
+            <view class="login_title">请先登录账号</view>
+            <view class="login_content">登录账号进行身份确认,以确保使用相关功能。</view>
+        </view>
+        <view class="login_button">
+            <button bindtap="handleLogin">一键授权</button>
+        </view>
+    </view>
+</view>

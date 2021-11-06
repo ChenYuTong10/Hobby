@@ -1,0 +1,119 @@
+/* pages/timetable/index.wxss */
+page{
+    background-color: #f7f7f7;
+}
+
+/*整体布局*/
+.timetable_group{
+    display: flex;
+    height: 140vh;
+    background-color: #fff;
+}
+
+/*左侧日期表*/
+.hour_group{
+    width: 17.5vw;
+    border-right: 1rpx solid #ebebeb;
+}
+.empty_hour{
+    height: 5vh;
+    border-bottom: 1rpx solid #ebebeb;
+}
+
+.hour_content{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1rpx solid #ebebeb;
+    font-size: 20rpx;
+}
+.hour_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.hour_details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+
+
+/*课程表*/
+.schedule_group{
+    width: 82.5vw;
+    white-space: nowrap; /*防止换行*/
+}
+.week_group{
+    height: 5vh;
+    font-size: 22rpx;
+    border-bottom: 1rpx solid #ebebeb;
+}
+.week_title{
+    width: 16.5vw;
+    height: 5vh;
+    padding: 10rpx;
+    display: inline-block; /*常用于水平放置item*/
+    border-right: 1rpx solid #ebebeb;
+}
+.week_name{
+    text-align: center;
+}
+.class_group{
+    width: 115.5vw;
+    height: 155vh;
+}
+.class_content{
+    position: relative;
+}
+.class_item{
+    z-index: 9999;
+    position: absolute;
+    width: 16.5vw;
+    font-size: 19rpx;
+    color: #fff;
+    border-radius: 20rpx;
+    padding: 10rpx;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+}
+.class_name,.class_room,.duration,.class_lecturer{
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+/*不同星期的课对应不同的样式*/
+.Monday{
+    left: 0;
+    background-image: linear-gradient(to bottom right, #cdfbff, #ef96c5);
+}
+.Tuesday{
+    left: 16.5vw;
+    background-image: linear-gradient(to bottom right, #ead6ee, #a0f1ea);
+}
+.Wednesday{
+    left: 33vw;
+    background-image: linear-gradient(to bottom right, #eebd89, #d13abd);
+}
+.Thursday{
+    left: 49.5vw;
+    background-image: linear-gradient(to bottom right, #f9957f, #f2f5d0);
+}
+.Friday{
+    left: 66vw;
+    background-image: linear-gradient(to bottom right, #eae5c9, #6cc6cb);
+}
+.Saturday{
+    left: 82.5vw;
+    background-image: linear-gradient(to bottom right, #ef33b1, #f6e6bc);
+}
+.Sunday{
+    left: 99vw;
+    background-image: linear-gradient(to bottom right, #9fa5d5, #e8f5c8);
+}

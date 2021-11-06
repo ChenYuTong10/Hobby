@@ -1,0 +1,53 @@
+<!--pages/history_course/index.wxml-->
+<view class="navigation_menu">
+    <view class="navigation_menu_tabs">
+        <tabs tabs="{{tabs}}" bindTabsTappedChange="handleTabsTappedChange">
+            <block wx:if="{{tabs[0].isActive}}">
+                <view class="module_group">
+                    <filter 
+                    filter="{{sports_courses_filter}}" 
+                    bindFilterTappedChange="handleSportsCoursesFilterChange"
+                    bindFilterReset="handleSportsCoursesFilterReset"
+                    bindFilterConfirm="handleSportsCoursesFilterConfirm"
+                    ></filter>
+                    <search></search>
+                </view>
+                <view class="course_list_group">
+                    <view
+                    class="course_list"
+                    wx:for="{{sports_courses}}"
+                    wx:key="id"
+                    >
+                        <view class="list_item">
+                            <downlist headers="{{sports_courses_headers}}" courses="{{item}}"
+                            bindDownListTapped="handleSportsCoursesDownListTapped" data-index="{{index}}"></downlist>
+                        </view>
+                    </view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="module_group">
+                    <filter 
+                    filter="{{general_courses_filter}}" 
+                    bindFilterTappedChange="handleGeneralCoursesFilterChange"
+                    bindFilterReset="handleGeneralCoursesFilterReset"
+                    bindFilterConfirm="handleGeneralCoursesFilterConfirm"
+                    ></filter>
+                    <search></search>
+                </view>
+                <view class="course_list_group">
+                    <view
+                    class="course_list"
+                    wx:for="{{general_courses}}"
+                    wx:key="id"
+                    >
+                        <view class="list_item">
+                            <downlist headers="{{general_courses_headers}}" courses="{{item}}"
+                            bindDownListTapped="handleGeneralCoursesDownListTapped" data-index="{{index}}"></downlist>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </tabs>
+    </view>
+</view>

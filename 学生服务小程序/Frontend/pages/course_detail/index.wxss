@@ -1,0 +1,105 @@
+/* pages/course_detail/index.wxss */
+/* pages/course/index.wxss */
+
+/*菜单栏*/
+.class_detail_group{
+    padding: 30rpx 25rpx;
+}
+.class_detail_content{
+    box-shadow: 20rpx 20rpx 20rpx #ecebeb;
+    border: 2rpx solid #f0f0f0;
+    border-radius: 20rpx;
+}
+.class_item{
+    padding: 20rpx;
+    font-size:28rpx;
+    border-bottom:2rpx solid #f0f0f0;
+    display: flex;
+}
+.class_item_title::before{
+    margin: 20rpx;
+}
+.class_item_title{
+    width: 35%;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.class_item_content{
+    display: flex;
+    align-items: center;
+    font-size: 26rpx;
+    padding: 10rpx 20rpx;
+    flex: 1;
+}
+.class_item_content input{
+    width: 100%;
+}
+/*单独给授课时间设置样式*/
+.class_item:nth-child(3){
+    display: block;
+}
+.class_item:nth-child(3) .class_item_content{
+    flex: 1;
+    display: flex;
+}
+.class_item_content picker{
+    position: relative;
+    flex: 1;
+    text-align:center;
+    margin: 0 10rpx;
+    padding-bottom: 10rpx;
+    border-bottom: 2rpx solid #ecebeb;
+}
+picker::after{
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 14rpx;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10rpx solid transparent;
+    border-top: 10rpx solid #999;
+}
+.class_item_content picker:nth-child(1){
+    text-align: left;
+}
+.class_item_content text{
+    width: 10%;
+    text-align: center;
+}
+
+
+/*按钮*/
+.storage_button{
+    margin: 30rpx;
+    font-size: 32rpx;
+    color: #fff;
+    background-color: var(--themeColor);
+}
+.delete_button{
+    margin: 30rpx;
+    font-size: 32rpx;
+    color: #fff;
+    background-color: red;
+}
+/*温馨提示*/
+.note{
+    margin:28rpx;
+    font-size: 24rpx;
+    color: #9d9d9d;
+    letter-spacing: 1rpx;
+    line-height: 45rpx;
+}
+.note_title::before{
+    font-size: 32rpx;
+}
+.title_text{
+    margin-left: 10rpx;
+    font-size: 24rpx;
+}
+.content_item{
+    padding:0 10rpx 0 30rpx;
+}

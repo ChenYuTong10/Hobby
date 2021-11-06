@@ -1,0 +1,39 @@
+<!--components/filter/filter.wxml-->
+<view class="filter_group">
+    <view class="filter_interfact iconfont icon-shaixuan" bindtap="handleFilterTapped">筛选</view>
+    <view class="filter_selection_group"
+    hidden="{{!isActive}}"
+    >
+        <scroll-view scroll-y class="srcoll_group">
+            <view class="filter_content">
+                <view
+                class="filter_item"
+                wx:for="{{filter}}"
+                wx:for-index="father_index"
+                wx:for-item="father_item"
+                wx:key="id"
+                >
+                    <view class="item_title">{{father_item.title}}</view>
+                    <view class="item_content">
+                        <view 
+                        class="content_selection {{children_item.isActive?'active':''}}"
+                        wx:for="{{father_item.content}}"
+                        wx:for-index="children_index"
+                        wx:for-item="children_item"
+                        wx:key="name"
+                        bindtap="handleFilterItemTapped"
+                        data-father_index="{{father_index}}"
+                        data-children_index="{{children_index}}"
+                        >
+                            {{children_item.name}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="button_group">
+            <button class="reset_button" bindtap="handleReset">重置</button>
+            <button class="confirm_button" bindtap="handleConfirm">确定</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,57 @@
+<view class="swiper_group">
+  <swiper
+  autoplay
+  circular
+  indicator-dots
+  interval="3500"
+  >
+    <swiper-item
+    wx:for="{{swiper_list}}"
+    wx:key="id">
+      <image src="{{item.path}}" />
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="navigation_menu_group">
+  <view class="navigation_menu_tabs">
+    <tabs tabs="{{tabs}}" bind:TabsTappedChange="handleTabsTappedChange">
+      <block wx:if="{{tabs[0].isActive}}">
+          <view class="navigation_menu_content">
+            <navigator
+            class="navigation_menu_item"
+            url="/pages/timetable/index"
+            >
+              <image src="../../icons/课程表.png" />
+          </navigator>
+          <navigator
+            class="navigation_menu_item"
+            url="/pages/course_list/index"
+            >
+              <image src="../../icons/选课.png" />
+          </navigator>
+        </view>
+      </block>
+      <block wx:elif="{{tabs[1].isActive}}">
+        <view class="navigation_menu_content">
+          <navigator
+          class="navigation_menu_item"
+          url="/pages/repair/index"
+          >
+            <image src="../../icons/报修.png" />
+          </navigator>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="navigation_menu_content">
+          <navigator
+          class="navigation_menu_item"
+          url="/pages/feedback/index"
+          >
+            <image src="../../icons/意见反馈.png" />
+          </navigator>
+        </view>
+      </block>
+    </tabs>
+  </view>
+</view>

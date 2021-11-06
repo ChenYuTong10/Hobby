@@ -1,0 +1,49 @@
+<!--pages/timetable/index.wxml-->
+<view class="timetable_group">
+    <!-- 左侧时刻表 -->
+    <view class="hour_group">
+        <view class="empty_hour"></view>
+        <view
+        class="hour_content"
+        wx:for="{{hourList}}"
+        wx:key="id"
+        >
+            <view class="hour_item">{{item.id+1}}</view>
+            <view class="hour_details">{{item.time}}</view>
+        </view>
+        <view class="empty_hour"></view>
+    </view>
+    <!-- 课程表 -->
+    <scroll-view scroll-x="{{true}}" class="schedule_group">
+        <!-- 表头 -->
+        <view class="week_group">
+            <view
+            class="week_title"
+            wx:for="{{weekList}}"
+            wx:key="*this"
+            >
+                <view class="week_name">{{item}}</view>
+            </view>
+        </view>
+        <!-- 课程 -->
+        <view class="class_group" catchtap="handleNavigateCourseManagement">
+            <view
+            class="class_content"
+            wx:for="{{courseList}}"
+            wx:key="*this"
+            >
+                <view
+                class="class_item {{item.day}}"
+                style="top:{{(item.start_time-8.0)*10}}vh;height:{{(item.end_time-item.start_time)*10}}vh"
+                catchtap="handleNavigateCourseDetails"
+                data-index="{{index}}"
+                >
+                    <view class="class_name">{{item.name}}</view>
+                    <view class="class_room">{{item.classroom}}</view>
+                    <view class="duration">{{item.duration}}</view>
+                    <view class="class_lecturer">{{item.lecturer}}</view>
+                </view>
+            </view>
+        </view>  
+    </scroll-view>
+</view>

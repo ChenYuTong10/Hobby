@@ -1,0 +1,37 @@
+<!--components/downlist/downlist.wxml-->
+<view class="downlist_group">
+    <view class="downlist_outline_group" bindtap="handleDownListTapped" data-id="{{courses.id}}">
+        <view class="course_outline">{{courses.name}}</view>
+        <view class="course_outline" hidden="{{!courses.type}}">{{courses.type}}</view>
+        <view class="course_outline">{{courses.credit}} 学分</view>
+    </view>
+    <view class="downlist_inline_group">
+        <scroll-view scroll-x style="height:{{5.0+10.0*courses.course_number}}vh" class="downlist_inline_scroll" hidden="{{!courses.isActive}}">
+            <view class="downlist_inline_headers">
+                <view 
+                class="header_item"
+                wx:for="{{headers}}"
+                wx:key="*this"
+                >
+                    <view class="header_details">{{item}}</view>
+                </view>
+            </view>
+            <view class="downlist_inline_content">
+                <view 
+                class="content_item"
+                wx:for="{{courses.details}}"
+                wx:key="id"
+                >
+                    <view class="content_details">
+                        <text class="courseInfo" wx:if="{{item.teacher}}">{{item.teacher}}</text>
+                        <text class="courseInfo" wx:if="{{item.contact}}">{{item.contact}}</text>
+                        <text class="courseInfo" wx:if="{{item.time}}">{{item.time}}</text>
+                        <text class="courseInfo" wx:if="{{item.classroom}}">{{item.classroom}}</text>
+                        <text class="courseInfo" wx:if="{{item.mode}}">{{item.mode}}</text>
+                        <text class="courseInfo" wx:if="{{item.remark}}">{{item.remark}}</text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

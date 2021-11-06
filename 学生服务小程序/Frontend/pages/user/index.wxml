@@ -1,0 +1,45 @@
+<!--pages/user/index.wxml-->
+<view class="user_information_group">
+    <navigator class="user_information" wx:if="{{userInfo.nickName}}" url="">
+        <view class="user_profile">
+            <image src="{{userInfo.avatarUrl}}" />
+            <view class="user_confirm">已认证</view>
+        </view>
+        <view class="user_privacy">
+            <view class="user_name">{{userInfo.nickName}}</view>
+            <view class="user_privacy_details">点击查看个人信息 ></view>
+        </view>
+    </navigator>
+    <navigator class="user_information" wx:else url="/pages/login/index">
+        <view class="user_profile">
+            <image src="https://z3.ax1x.com/2021/09/02/hDi1j1.png" />
+            <view class="user_confirm">未认证</view>
+        </view>
+        <view class="user_privacy">
+            <view class="user_name">游客</view>
+            <view class="user_privacy_details">点击进行注册/登录 ></view>
+        </view>
+    </navigator>
+</view>
+
+<view class="user_correlation_group">
+    <view class="user_correlation_content">
+        <view class="user_service_log">
+
+        </view>
+        <view class="user_addition">
+            <view class="addition_item">
+                <view class="item_content">在线客服</view>
+                <view class="item_content">></view>
+            </view>
+            <view class="addition_item">
+                <view class="item_content">消息中心</view>
+                <view class="item_content">></view>
+            </view>
+            <navigator class="addition_item" url="/pages/feedback/index">
+                <view class="item_content">意见反馈</view>
+                <view class="item_content">></view>
+            </navigator>
+        </view>
+    </view>
+</view>

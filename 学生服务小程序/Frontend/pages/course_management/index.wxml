@@ -1,0 +1,93 @@
+<!--pages/course/index.wxml-->
+<tabs tabs="{{tabs}}" bindTabsTappedChange="handleTabsTappedChange">
+    <block wx:if="{{tabs[0].isActive}}">
+        <view class="add_class_group">
+            <view class="add_class_content">
+                <view class="class_item">
+                    <view class="class_item_title iconfont icon-biaoqiankuozhan_kecheng-136">课程名称</view>
+                    <view class="class_item_content">
+                        <input value="{{course_name}}" maxlength="6" bindinput="handleInputCourseName" placeholder="请输入课程名称" />
+                    </view>
+                </view>
+                <view class="class_item">
+                    <view class="class_item_title iconfont icon-jiaoshi1">授课地点</view>
+                    <view class="class_item_content">
+                        <input value="{{course_room}}" maxlength="6" bindinput="handleInputCourseRoom" placeholder="请输入授课地点" />
+                    </view>
+                </view>
+                <view class="class_item">
+                    <view class="class_item_title iconfont icon-time">授课时间</view>
+                    <view class="class_item_content">
+                        <picker mode="multiSelector" range="{{weekList}}" value="={{weekList_index}}" bindchange="handleWeekChange">{{weekList[0][weekList_index[0]]}}-{{weekList[1][weekList_index[1]]}}周</picker>
+                        <picker mode="selector" range="{{dayList}}" value="{{dayList_index}}" range-key="name" bindchange="handleDayChange">
+                            <view class="picker_content" style="color:{{day_color}}">{{dayList[dayList_index].name}}</view>
+                        </picker>
+                        <picker class="start_selector" mode="time" start="08:00" end="21:00" range="{{startTimeList}}" value="{{start_time}}" bindchange="handleStartTimeChange">
+                            <view class="picker_content" style="color:{{start_time_color}}">{{start_time}}</view>
+                        </picker>
+                        <text class="time_connector">—</text>
+                        <picker class="end_selector" mode="time" start="08:00" end="21:00" range="{{endTimeList}}" value="{{end_time}}" bindchange="handleEndTimeChange">
+                            <view class="picker_content" style="color:{{end_time_color}}">{{end_time}}</view>
+                        </picker>
+                    </view>
+                </view>
+                <view class="class_item">
+                    <view class="class_item_title iconfont icon-jiaoshi">授课教师</view>
+                    <view class="class_item_content">
+                        <input value="{{lecturer}}" maxlength="6" bindinput="handleInputLecturer" placeholder="请输入授课教师" />
+                    </view>
+                </view>
+                <view class="class_item">
+                    <view class="class_item_title iconfont icon-beizhu">其他备注</view>
+                    <view class="class_item_content">
+                        <input value="{{remark}}" maxlength="100" bindinput="handleInputRemark" placeholder="请输入你想添加的备注" />
+                    </view>
+                </view>
+                <button bindtap="handleSubmit">添加</button>
+                <view class="note">
+                    <view class="note_title">
+                        <view class="title_text iconfont icon-warn-line">温馨提示:</view>
+                    </view>
+                    <view class="note_content">
+                        <view class="content_item">1.手动添加课程可能较为缓慢,如果没有耐心的小伙伴可以前往"导入课表"模块。</view>
+                        <view class="content_item">2.请同学们尽可能规范地填写课程信息,以免出现显示错误等情况。</view>
+                        <view class="content_item">3.如仍有疑问,请致电客服。</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="login_group">
+            <view class="login_content">
+                <view class="login_welcome_head">
+                    <view class="welcome_text">欢迎登录</view>
+                </view>
+                <view class="login_item">
+                    <view class="login_item_title iconfont icon-zhanghao1">学号</view>
+                    <view class="login_item_content">
+                        <input value="{{username}}" bindinput="handleUsernameInput" placeholder="请输入学号" />
+                    </view>
+                </view>
+                <view class="login_item">
+                    <view class="login_item_title iconfont icon-ziyuanxhdpi">密码</view>
+                    <view class="login_item_content">
+                        <input password="{{true}}" value="{{password}}" bindinput="handlePasswordInput" placeholder="请输入密码" />
+                    </view>
+                </view>
+                <button bindtap="handleLogin">登录</button>
+                <view class="note">
+                    <view class="note_title">
+                        <view class="title_text iconfont icon-warn-line">温馨提示:</view>
+                    </view>
+                    <view class="note_content">
+                        <view class="content_item">1.填写的信息将会登录广州大学教务处。</view>
+                        <view class="content_item">2.登录行为未获得广州大学官方许可。</view>
+                        <view class="content_item">3.作者郑重承诺不会以任何形式保存用户的任何信息。</view>
+                        <view class="content_item">4.如仍有疑问,请致电客服。</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</tabs>

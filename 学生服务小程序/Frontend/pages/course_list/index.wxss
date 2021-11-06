@@ -1,0 +1,22 @@
+/* pages/history_course/index.wxss */
+
+/*组件*/
+.module_group{
+    display: flex;
+    border-bottom: 1rpx solid #e7e7e7;
+}
+search{
+    flex: 4;
+}
+filter{
+    flex: 1;
+    border-right: 1rpx solid #e7e7e7;
+}
+
+/*课程列表*/
+.course_list_group{
+    padding: 20rpx;
+}
+.list_item{
+    margin-bottom: 20rpx;
+}

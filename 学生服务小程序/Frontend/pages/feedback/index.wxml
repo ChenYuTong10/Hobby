@@ -1,0 +1,41 @@
+<!--pages/setting/index.wxml-->
+<view class="feedback_content_group">
+    <view class="feedback_content">
+        <textarea 
+        value="{{feedback_content}}"
+        bindinput="handleFeedbackInput" 
+        maxlength="-1" 
+        placeholder="欢迎写下您不满的地方,同时留下您的联系方式"
+        ></textarea>
+        <view class="feedback_image">
+            <button bindtap="handleUpLoadImage" class="feedback_image_button">+</button>
+            <view
+            class="feedback_image_content"
+            wx:for="{{upimageList}}"
+            wx:key="*this"
+            >
+                <upimage
+                bindPreviewImage="handlePreviewImage"
+                bindDeleteImage="handleDeleteImage"
+                data-index="{{index}}" 
+                src="{{item}}">
+                </upimage>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="feekback_type_group">
+    <view class="feedback_type_title">请选择反馈类型</view>
+    <view class="feedback_type_content">
+        <radio-group bindchange="handleRadioChange">
+            <label class="content_item" wx:for="{{typeList}}" wx:key="id">
+                <radio checked="{{item.isChecked}}" value="{{item.value}}" /> {{item.name}}
+            </label>
+        </radio-group>
+    </view>
+</view>
+
+<view class="feedback_button_group">
+    <button class="feedback_submit_button" bindtap="handleSubmit">确定</button>
+</view>

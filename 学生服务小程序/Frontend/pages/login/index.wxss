@@ -1,0 +1,49 @@
+/* pages/login/index.wxss */
+page{
+    height: 96%;
+    background-color: #f4f4f4;
+}
+
+/*登录页面整体布局*/
+.login_group{
+    height: 100%;
+    margin: 20rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+}
+
+/*登录图片*/
+.login_top_image{
+    height: 45vh;
+    width: 100%;
+}
+.login_bottom_image{
+    width: 100%;
+    height: 25vh;
+}
+
+/*登录文字*/
+.login_introduction{
+    text-align: center;
+}
+.login_title{
+    font-size: 32rpx;
+}
+.login_content{
+    padding: 30rpx 0;
+    color: #959595;
+    font-size: 28rpx;
+}
+
+/*登录按钮*/
+.login_button{
+    padding: 20rpx 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_button button{
+    width: 94%;
+    color: #fff;
+    background-color: #5284f7;
+}

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "tabs": "../../components/tabs/tabs"
+  },
+  "navigationBarTitleText":"课程管理",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance":50,
+  "backgroundColorTop":"#fff",
+  "backgroundColorBottom":"#fff"
+}

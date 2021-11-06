@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "search": "../../components/search/search",
+    "tabs": "../../components/tabs/tabs",
+    "filter": "../../components/filter/filter",
+    "downlist": "../../components/downlist/downlist"
+  },
+  "navigationBarTitleText":"往年选课数据",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance":50,
+  "backgroundColorTop":"#fff",
+  "backgroundColorBottom":"#fff"
+}

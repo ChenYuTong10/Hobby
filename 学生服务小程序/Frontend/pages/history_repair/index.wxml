@@ -1,0 +1,74 @@
+<tabs tabs="{{tabs}}" bind:TabsTappedChange="handleTabsTappedChange"></tabs>
+
+<view class="history_repairInfo_group" wx:if="{{tabs[0].isActive}}">
+    <view class="history_repairInfo_content">
+        <view 
+        class="repairInfo_item"
+        wx:for="{{repairing_list}}"
+        wx:key="id"
+        >
+            <view class="item_title">
+                <view class="item_id">#{{item.id}}</view>
+                <view class="item_time">{{item.time}}</view>
+            </view>
+            <view class="item_content">
+                <view class="item_line">
+                    <view class="line_title">姓名</view>
+                    <view class="line_content">{{item.name}}</view>
+                </view>
+                <view class="item_line">
+                    <view class="line_title">手机号</view>
+                    <view class="line_content">{{item.phone}}</view>
+                </view>
+                <view class="item_line">
+                    <view class="line_title">宿舍号</view>
+                    <view class="line_content">{{item.dorm}}</view>
+                </view>
+                <view class="item_line">
+                    <view class="line_title">故障情况</view>
+                    <view class="line_content">{{item.details}}</view>
+                </view>
+            </view>
+            <view class="repairInfo_dispose_group">
+                <view class="repairInfo_modification" bind:tap="handleRepairInfoModification" data-id="{{item.id}}">修改信息</view>
+                <view class="repairInfo_backout" bind:tap="handleRepairInfoBackout" data-id="{{item.id}}">取消报修</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="history_repairInfo_group" wx:if="{{tabs[1].isActive}}">
+    <view class="history_repairInfo_content">
+        <view 
+        class="repairInfo_item"
+        wx:for="{{repaired_list}}"
+        wx:key="id"
+        >
+            <view class="item_title">
+                <view class="item_id">#{{item.id}}</view>
+                <view class="item_time">{{item.time}}</view>
+            </view>
+            <view class="item_content">
+                <view class="item_line">
+                    <view class="line_title">姓名</view>
+                    <view class="line_content">{{item.name}}</view>
+                </view>
+                <view class="item_line">
+                    <view class="line_title">手机号</view>
+                    <view class="line_content">{{item.phone}}</view>
+                </view>                        
+                <view class="item_line">
+                    <view class="line_title">宿舍号</view>
+                    <view class="line_content">{{item.dorm}}</view>
+                </view>                        
+                <view class="item_line">
+                    <view class="line_title">故障情况</view>
+                    <view class="line_content">{{item.details}}</view>
+                </view>
+            </view>
+            <view class="repairInfo_appeal_group">
+                <view class="repairInfo_appeal">仍有问题</view>
+            </view>
+        </view>
+    </view>
+</view>

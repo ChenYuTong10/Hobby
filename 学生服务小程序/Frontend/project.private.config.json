@@ -1,0 +1,72 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "报修页面",
+                    "pathName": "pages/repair/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "个人中心",
+                    "pathName": "pages/user/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "登录",
+                    "pathName": "pages/login/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "意见反馈",
+                    "pathName": "pages/feedback/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "课程表",
+                    "pathName": "pages/timetable/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "导入课程",
+                    "pathName": "pages/course_management/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "课程详情",
+                    "pathName": "pages/course_detail/index",
+                    "query": "index=0",
+                    "scene": null
+                },
+                {
+                    "name": "维修历史记录",
+                    "pathName": "pages/history_repair/index",
+                    "query": "username=😪",
+                    "scene": null
+                },
+                {
+                    "name": "选课课程",
+                    "pathName": "pages/course_list/index",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

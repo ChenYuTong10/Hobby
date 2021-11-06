@@ -1,0 +1,67 @@
+/* components/downlist/downlist.wxss */
+/*外头标题*/
+.downlist_outline_group{
+    height: 70rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15rpx;
+    border-radius: 8rpx;
+    background-color: #d6eaff;
+    font-size: 26rpx;
+    letter-spacing: 1rpx;
+}
+.downlist_outline_group::after{
+    width: 0;
+    height: 0;
+    content: '';
+    border-left: 10rpx solid transparent;
+    border-right: 10rpx solid transparent;
+    border-top: 10rpx solid #000;
+}
+.course_outline{
+    flex:1;
+    text-align: center;
+}
+.course_outline:first-child{
+    flex: 2;
+}
+
+/*内头标题*/
+.downlist_inline_scroll{
+    width: 100%;
+    border: 2rpx solid #e7e7e7;
+    border-top: none;
+}
+.downlist_inline_headers{
+    width: 180vw;
+    display: flex;
+    font-size: 26rpx;
+    border-bottom: 2rpx solid #e7e7e7;
+}
+.header_item{
+    height: 5vh;
+    flex: 1;
+    padding: 15rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*内头内容*/
+.downlist_inline_content{
+    width: 180vw;
+}
+.content_details{
+    display: flex;
+    height: 10vh;
+    border-bottom: 1rpx solid #e7e7e7;
+}
+.courseInfo{
+    flex: 1;
+    font-size: 22rpx;
+    padding: 10rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
