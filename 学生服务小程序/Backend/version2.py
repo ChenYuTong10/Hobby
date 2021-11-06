@@ -6,7 +6,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 # 数据库
-mysql_account = {"user": "root", "password": "cytzero3434"}
+mysql_account = {"user": "root", "password": "123456"}
 
 
 @app.route('/')
